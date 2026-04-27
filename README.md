@@ -90,7 +90,7 @@ Each `.cpp` file is independent — there are no shared header files. Each algor
 
 #### Requirements
 
-- **g++** with C++17 support (tested with g++ 15.2 from MSYS2 UCRT64)
+- **g++** (tested with g++ 15.2 from MSYS2 UCRT64)
 - A Solomon Benchmark `.txt` file in the `data/` folder (five are included)
 
 #### Build
@@ -108,22 +108,6 @@ run_experiments.exe
 ```
 
 The program lists every `.txt` instance found in `../data/`, prompts you to pick one, runs all three algorithms, prints route-by-route output and a summary comparison table, and finally asks whether to save the full report to `../results/<instance>_results.txt`.
-
-#### Windows / VS Code setup
-
-If you're on Windows and `g++` isn't recognized, install MSYS2 and add `C:\msys64\ucrt64\bin` to your PATH:
-
-```
-winget install MSYS2.MSYS2
-```
-
-Then in the **MSYS2 UCRT64** shell:
-
-```
-pacman -S --needed mingw-w64-ucrt-x86_64-gcc
-```
-
-Restart your terminal (and VS Code) after updating PATH.
 
 ---
 

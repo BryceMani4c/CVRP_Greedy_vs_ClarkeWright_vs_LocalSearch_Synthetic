@@ -1,0 +1,97 @@
+Dataset: 100 customers, capacity=200, total demand=1810
+------------------------------------------------------------
+
+[1] GREEDY NEAREST NEIGHBOR
+------------------------------------------------------------
+  Total distance : 1311.50
+  Vehicles used  : 10
+  Runtime        : 0.000236 seconds
+
+  Route 1: 13 stops, demand=200, distance=92.98
+           customers: [19, 20, 21, 22, 25, 27, 26, 24, 23, 28, 29, 33, 35]
+  Route 2: 11 stops, demand=200, distance=63.06
+           customers: [66, 64, 62, 61, 65, 68, 67, 63, 60, 71, 73]
+  Route 3: 13 stops, demand=200, distance=90.60
+           customers: [4, 2, 3, 5, 7, 8, 10, 9, 6, 74, 0, 1, 97]
+  Route 4: 16 stops, demand=200, distance=147.09
+           customers: [42, 41, 40, 39, 43, 44, 45, 47, 49, 50, 51, 48, 46, 30, 34, 58]
+  Route 5: 13 stops, demand=200, distance=133.00
+           customers: [89, 88, 87, 84, 83, 82, 81, 85, 86, 90, 95, 98, 93]
+  Route 6: 9 stops, demand=200, distance=164.90
+           customers: [12, 16, 17, 18, 14, 15, 13, 11, 54]
+  Route 7: 7 stops, demand=200, distance=152.57
+           customers: [31, 32, 36, 37, 38, 56, 52]
+  Route 8: 8 stops, demand=200, distance=177.10
+           customers: [94, 96, 92, 91, 99, 80, 77, 75]
+  Route 9: 9 stops, demand=190, distance=176.20
+           customers: [53, 55, 57, 59, 79, 78, 76, 72, 69]
+  Route 10: 1 stops, demand=20, distance=114.02
+           customers: [70]
+
+[2] CLARKE-WRIGHT SAVINGS
+------------------------------------------------------------
+  Total distance : 833.51
+  Vehicles used  : 10
+  Runtime        : 0.010712 seconds
+
+  Route 1: 8 stops, demand=200, distance=101.88
+           customers: [56, 54, 53, 52, 55, 57, 59, 58]
+  Route 2: 9 stops, demand=200, distance=97.23
+           customers: [31, 32, 30, 34, 36, 37, 38, 35, 33]
+  Route 3: 10 stops, demand=170, distance=76.07
+           customers: [90, 88, 87, 84, 83, 81, 82, 85, 86, 89]
+  Route 4: 9 stops, demand=200, distance=100.46
+           customers: [10, 11, 13, 15, 18, 14, 17, 16, 12]
+  Route 5: 14 stops, demand=200, distance=138.15
+           customers: [65, 67, 63, 60, 71, 79, 78, 76, 72, 69, 70, 75, 77, 80]
+  Route 6: 13 stops, demand=160, distance=66.24
+           customers: [46, 48, 51, 49, 50, 47, 44, 43, 45, 41, 39, 40, 42]
+  Route 7: 10 stops, demand=200, distance=97.63
+           customers: [97, 95, 94, 93, 91, 92, 96, 99, 98, 2]
+  Route 8: 10 stops, demand=160, distance=59.79
+           customers: [74, 0, 1, 3, 5, 8, 7, 6, 4, 9]
+  Route 9: 6 stops, demand=150, distance=44.85
+           customers: [68, 61, 73, 62, 64, 66]
+  Route 10: 11 stops, demand=170, distance=51.21
+           customers: [19, 20, 21, 23, 24, 26, 28, 29, 27, 25, 22]
+
+[3] LOCAL SEARCH (2-OPT) improving Greedy solution
+------------------------------------------------------------
+  Total distance : 1239.44
+  Vehicles used  : 10
+  Runtime        : 0.000822 seconds
+
+  Route 1: 13 stops, demand=200, distance=79.83
+           customers: [20, 21, 22, 25, 27, 29, 35, 33, 28, 26, 24, 23, 19]
+  Route 2: 11 stops, demand=200, distance=60.85
+           customers: [68, 67, 63, 60, 71, 73, 61, 65, 62, 64, 66]
+  Route 3: 13 stops, demand=200, distance=86.70
+           customers: [9, 10, 8, 7, 5, 3, 1, 97, 0, 74, 4, 2, 6]
+  Route 4: 16 stops, demand=200, distance=130.54
+           customers: [46, 48, 51, 30, 34, 50, 49, 47, 45, 44, 43, 58, 39, 40, 41, 42]
+  Route 5: 13 stops, demand=200, distance=120.20
+           customers: [98, 95, 93, 90, 88, 87, 84, 83, 81, 82, 85, 86, 89]
+  Route 6: 9 stops, demand=200, distance=163.38
+           customers: [11, 13, 15, 14, 18, 17, 16, 12, 54]
+  Route 7: 7 stops, demand=200, distance=149.88
+           customers: [38, 37, 36, 32, 31, 52, 56]
+  Route 8: 8 stops, demand=200, distance=162.58
+           customers: [80, 77, 75, 94, 91, 92, 96, 99]
+  Route 9: 9 stops, demand=190, distance=171.46
+           customers: [59, 57, 55, 53, 79, 69, 72, 76, 78]
+  Route 10: 1 stops, demand=20, distance=114.02
+           customers: [70]
+
+============================================================
+SUMMARY COMPARISON
+============================================================
+Algorithm                       Distance  Vehicles  Time (s)
+------------------------------------------------------------
+Greedy Nearest Neighbor          1311.50        10  0.000236
+Clarke-Wright Savings             833.51        10  0.010712
+Local Search (2-opt)             1239.44        10  0.000822
+------------------------------------------------------------
+
+  Clarke-Wright vs Greedy : +36.45% distance
+  Local Search vs Greedy : +5.49% distance
+
